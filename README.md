@@ -1,7 +1,7 @@
 # Drink Friend App Starter for Vaadin 10
 :coffee::tea::sake::baby_bottle::beer::cocktail::tropical_drink::wine_glass:
 
-This is a Vaadin 10 Flow example Java application, used to demonstrate features of the Vaadin Flow Java framework.
+This is a Vaadin 10 Flow example Java application, used to demonstrate features of the Vaadin Flow Java framework. Non-PolymerTemplates fork of github.com/vaadin/beverage-starter-flow/ .
 
 The Starter demonstrates the core Vaadin Flow concepts:
 * Building UIs in Java with Components based on [Vaadin components](https://vaadin.com/components/browse), such as `TextField`, `Button`, `ComboBox`, `DatePicker`, `VerticalLayout` and `Grid` (see `CategoriesList`)
