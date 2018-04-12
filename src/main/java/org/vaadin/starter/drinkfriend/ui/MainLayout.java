@@ -29,16 +29,14 @@ import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.InitialPageSettings;
 import com.vaadin.flow.server.PageConfigurator;
 import org.vaadin.starter.drinkfriend.ui.views.categorieslist.CategoriesList;
-import org.vaadin.starter.drinkfriend.ui.views.reviewslist.ReviewsList;
+import org.vaadin.starter.drinkfriend.ui.views.reviewslist.ReviewsListing;
 
 /**
- * The main layout contains the header with the navigation buttons, and the
- * child views below that.
+ * The main layout contains the header with the navigation buttons, and the child views below that.
  */
 @HtmlImport("frontend://styles/shared-styles.html")
 @Viewport("width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes")
-public class MainLayout extends Div
-        implements RouterLayout, AfterNavigationObserver, PageConfigurator {
+public class MainLayout extends Div implements RouterLayout, AfterNavigationObserver, PageConfigurator {
 
     private static final String ACTIVE_ITEM_STYLE = "main-layout__nav-item--selected";
     private RouterLink categories;
@@ -48,7 +46,7 @@ public class MainLayout extends Div
         H2 title = new H2("Drink Friend");
         title.addClassName("main-layout__title");
 
-        reviews = new RouterLink(null, ReviewsList.class);
+        reviews = new RouterLink(null, ReviewsListing.class);
         reviews.add(new Icon(VaadinIcons.LIST), new Text("Reviews"));
         reviews.addClassName("main-layout__nav-item");
 
