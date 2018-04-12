@@ -1,4 +1,4 @@
-package com.vaadin.starter.beveragebuddy.backend;
+package org.vaadin.starter.drinkfriend.backend;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ class StaticData {
 
     public static final String UNDEFINED = "Undefined";
     
-    static final Map<String, String> BEVERAGES = new LinkedHashMap<>();
+    static final Map<String, String> DRINKS = new LinkedHashMap<>();
 
     static {
         Stream.of("Evian",
@@ -26,17 +26,17 @@ class StaticData {
                 "Veen",
                 "San Pellegrino",
                 "Perrier")
-                .forEach(name -> BEVERAGES.put(name, MINERAL_WATER));
+                .forEach(name -> DRINKS.put(name, MINERAL_WATER));
 
         Stream.of("Coca-Cola",
                 "Fanta",
                 "Sprite")
-                .forEach(name -> BEVERAGES.put(name, SOFT_DRINK));
+                .forEach(name -> DRINKS.put(name, SOFT_DRINK));
 
         Stream.of("Maxwell Ready-to-Drink Coffee",
                 "Nescafé Gold",
                 "Starbucks East Timor Tatamailau")
-                .forEach(name -> BEVERAGES.put(name, COFFEE));
+                .forEach(name -> DRINKS.put(name, COFFEE));
 
         Stream.of("Prince Of Peace Organic White Tea",
                 "Pai Mu Tan White Peony Tea",
@@ -45,7 +45,7 @@ class StaticData {
                 "Twinings Earl Grey",
                 "Twinings Lady Grey",
                 "Classic Indian Chai")
-                .forEach(name -> BEVERAGES.put(name, TEA));
+                .forEach(name -> DRINKS.put(name, TEA));
 
         Stream.of("Cow's Milk",
                 "Goat's Milk",
@@ -53,7 +53,7 @@ class StaticData {
                 "Salt Lassi",
                 "Mango Lassi",
                 "Airag")
-                .forEach(name -> BEVERAGES.put(name, DAIRY));
+                .forEach(name -> DRINKS.put(name, DAIRY));
 
         Stream.of("Crowmoor Extra Dry Apple",
                 "Golden Cap Perry",
@@ -67,7 +67,7 @@ class StaticData {
                 "Angry Orchard Stone Dry",
                 "Walden Hollow",
                 "Fox Barrel Wit Pear")
-                .forEach(name -> BEVERAGES.put(name, CIDER));
+                .forEach(name -> DRINKS.put(name, CIDER));
 
         Stream.of("Budweiser",
                 "Miller",
@@ -90,19 +90,19 @@ class StaticData {
                 "Lapin Kulta IVA",
                 "Kukko Pils III",
                 "Finlandia Sahti")
-                .forEach(name -> BEVERAGES.put(name, BEER));
+                .forEach(name -> DRINKS.put(name, BEER));
 
         Stream.of("Jacob's Creek Classic Shiraz",
                 "Chateau d’Yquem Sauternes",
                 "Oremus Tokaji Aszú 5 Puttonyos")
-                .forEach(name -> BEVERAGES.put(name, WINE));
+                .forEach(name -> DRINKS.put(name, WINE));
 
         Stream.of("Pan Galactic Gargle Blaster",
                 "Mead",
                 "Soma")
-                .forEach(name -> BEVERAGES.put(name, OTHER));
+                .forEach(name -> DRINKS.put(name, OTHER));
 
-        BEVERAGES.put("", UNDEFINED);
+        DRINKS.put("", UNDEFINED);
     }
 
     /** This class is not meant to be instantiated. */

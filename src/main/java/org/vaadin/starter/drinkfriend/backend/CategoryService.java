@@ -1,4 +1,4 @@
-package com.vaadin.starter.beveragebuddy.backend;
+package org.vaadin.starter.drinkfriend.backend;
 
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -30,7 +30,7 @@ public class CategoryService {
         private static CategoryService createDemoCategoryService() {
             CategoryService categoryService = new CategoryService();
             Set<String> categoryNames = new LinkedHashSet<>(
-                    StaticData.BEVERAGES.values());
+                    StaticData.DRINKS.values());
 
             categoryNames.forEach(name -> categoryService.saveCategory(new Category(name)));
 

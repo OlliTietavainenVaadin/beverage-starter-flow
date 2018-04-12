@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.vaadin.starter.beveragebuddy.ui;
+package org.vaadin.starter.drinkfriend.ui;
 
 import com.vaadin.flow.component.Text;
 import com.vaadin.flow.component.dependency.HtmlImport;
@@ -28,8 +28,8 @@ import com.vaadin.flow.router.RouterLayout;
 import com.vaadin.flow.router.RouterLink;
 import com.vaadin.flow.server.InitialPageSettings;
 import com.vaadin.flow.server.PageConfigurator;
-import com.vaadin.starter.beveragebuddy.ui.views.categorieslist.CategoriesList;
-import com.vaadin.starter.beveragebuddy.ui.views.reviewslist.ReviewsList;
+import org.vaadin.starter.drinkfriend.ui.views.categorieslist.CategoriesList;
+import org.vaadin.starter.drinkfriend.ui.views.reviewslist.ReviewsList;
 
 /**
  * The main layout contains the header with the navigation buttons, and the
@@ -45,7 +45,7 @@ public class MainLayout extends Div
     private RouterLink reviews;
 
     public MainLayout() {
-        H2 title = new H2("Beverage Buddy");
+        H2 title = new H2("Drink Friend");
         title.addClassName("main-layout__title");
 
         reviews = new RouterLink(null, ReviewsList.class);

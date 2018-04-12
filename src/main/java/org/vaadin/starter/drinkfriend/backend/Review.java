@@ -1,10 +1,10 @@
-package com.vaadin.starter.beveragebuddy.backend;
+package org.vaadin.starter.drinkfriend.backend;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
- * Represents a beverage review.
+ * Represents a drink review.
  */
 public class Review implements Serializable {
 
@@ -28,11 +28,11 @@ public class Review implements Serializable {
      * @param score
      *            Review score
      * @param name
-     *            Name of beverage reviewed
+     *            Name of drink reviewed
      * @param date
      *            Last review date
      * @param category
-     *            Category of beverage
+     *            Category of drink
      * @param count
      *            Times tasted
      */

@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.vaadin.starter.beveragebuddy.ui.views.reviewslist;
+package org.vaadin.starter.drinkfriend.ui.views.reviewslist;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -27,10 +27,10 @@ import com.vaadin.flow.data.converter.StringToIntegerConverter;
 import com.vaadin.flow.data.validator.DateRangeValidator;
 import com.vaadin.flow.data.validator.IntegerRangeValidator;
 import com.vaadin.flow.data.validator.StringLengthValidator;
-import com.vaadin.starter.beveragebuddy.backend.Category;
-import com.vaadin.starter.beveragebuddy.backend.CategoryService;
-import com.vaadin.starter.beveragebuddy.backend.Review;
-import com.vaadin.starter.beveragebuddy.ui.common.AbstractEditorDialog;
+import org.vaadin.starter.drinkfriend.backend.Category;
+import org.vaadin.starter.drinkfriend.backend.CategoryService;
+import org.vaadin.starter.drinkfriend.backend.Review;
+import org.vaadin.starter.drinkfriend.ui.common.AbstractEditorDialog;
 
 /**
  * A dialog for editing {@link Review} objects.
@@ -43,7 +43,7 @@ public class ReviewEditorDialog extends AbstractEditorDialog<Review> {
     private ComboBox<Category> categoryBox = new ComboBox<>();
     private ComboBox<String> scoreBox = new ComboBox<>();
     private DatePicker lastTasted = new DatePicker();
-    private TextField beverageName = new TextField();
+    private TextField drinkName = new TextField();
     private TextField timesTasted = new TextField();
 
     public ReviewEditorDialog(BiConsumer<Review, Operation> saveHandler,
@@ -120,14 +120,14 @@ public class ReviewEditorDialog extends AbstractEditorDialog<Review> {
     }
 
     private void createNameField() {
-        beverageName.setLabel("Beverage");
-        beverageName.setRequired(true);
-        getFormLayout().add(beverageName);
+        drinkName.setLabel("Drink");
+        drinkName.setRequired(true);
+        getFormLayout().add(drinkName);
 
-        getBinder().forField(beverageName)
+        getBinder().forField(drinkName)
                 .withConverter(String::trim, String::trim)
                 .withValidator(new StringLengthValidator(
-                        "Beverage name must contain at least 3 printable characters",
+                        "Drink name must contain at least 3 printable characters",
                         3, null))
                 .bind(Review::getName, Review::setName);
     }

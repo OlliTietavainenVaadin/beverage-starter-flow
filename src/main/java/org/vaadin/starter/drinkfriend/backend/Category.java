@@ -1,10 +1,10 @@
-package com.vaadin.starter.beveragebuddy.backend;
+package org.vaadin.starter.drinkfriend.backend;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * Represents a beverage category.
+ * Represents a drink category.
  */
 public class Category implements Serializable {
 

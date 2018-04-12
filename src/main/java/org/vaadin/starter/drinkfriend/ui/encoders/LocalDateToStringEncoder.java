@@ -1,4 +1,4 @@
-package com.vaadin.starter.beveragebuddy.ui.encoders;
+package org.vaadin.starter.drinkfriend.ui.encoders;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

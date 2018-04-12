@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.vaadin.starter.beveragebuddy.ui.views.categorieslist;
+package org.vaadin.starter.drinkfriend.ui.views.categorieslist;
 
 import java.util.List;
 
@@ -31,12 +31,12 @@ import com.vaadin.flow.data.renderer.ComponentRenderer;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.starter.beveragebuddy.backend.Category;
-import com.vaadin.starter.beveragebuddy.backend.CategoryService;
-import com.vaadin.starter.beveragebuddy.backend.Review;
-import com.vaadin.starter.beveragebuddy.backend.ReviewService;
-import com.vaadin.starter.beveragebuddy.ui.MainLayout;
-import com.vaadin.starter.beveragebuddy.ui.common.AbstractEditorDialog;
+import org.vaadin.starter.drinkfriend.backend.Category;
+import org.vaadin.starter.drinkfriend.backend.CategoryService;
+import org.vaadin.starter.drinkfriend.backend.Review;
+import org.vaadin.starter.drinkfriend.backend.ReviewService;
+import org.vaadin.starter.drinkfriend.ui.MainLayout;
+import org.vaadin.starter.drinkfriend.ui.common.AbstractEditorDialog;
 
 /**
  * Displays the list of available categories, with a search filter as well as
@@ -92,7 +92,7 @@ public class CategoriesList extends VerticalLayout {
         container.setAlignItems(Alignment.STRETCH);
 
         grid.addColumn(Category::getName).setHeader("Name").setWidth("8em").setResizable(true);
-        grid.addColumn(this::getReviewCount).setHeader("Beverages").setWidth("6em");
+        grid.addColumn(this::getReviewCount).setHeader("Drinks").setWidth("6em");
         grid.addColumn(new ComponentRenderer<>(this::createEditButton))
                 .setFlexGrow(0);
         grid.setSelectionMode(SelectionMode.NONE);

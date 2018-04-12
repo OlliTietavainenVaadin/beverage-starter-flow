@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.vaadin.starter.beveragebuddy.ui.views.reviewslist;
+package org.vaadin.starter.drinkfriend.ui.views.reviewslist;
 
 import java.util.List;
 
@@ -34,13 +34,13 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.templatemodel.Encode;
 import com.vaadin.flow.templatemodel.TemplateModel;
-import com.vaadin.starter.beveragebuddy.backend.Review;
-import com.vaadin.starter.beveragebuddy.backend.ReviewService;
-import com.vaadin.starter.beveragebuddy.ui.MainLayout;
-import com.vaadin.starter.beveragebuddy.ui.common.AbstractEditorDialog;
-import com.vaadin.starter.beveragebuddy.ui.encoders.LocalDateToStringEncoder;
-import com.vaadin.starter.beveragebuddy.ui.encoders.LongToStringEncoder;
-import com.vaadin.starter.beveragebuddy.ui.views.reviewslist.ReviewsList.ReviewsModel;
+import org.vaadin.starter.drinkfriend.backend.Review;
+import org.vaadin.starter.drinkfriend.backend.ReviewService;
+import org.vaadin.starter.drinkfriend.ui.MainLayout;
+import org.vaadin.starter.drinkfriend.ui.common.AbstractEditorDialog;
+import org.vaadin.starter.drinkfriend.ui.encoders.LocalDateToStringEncoder;
+import org.vaadin.starter.drinkfriend.ui.encoders.LongToStringEncoder;
+import org.vaadin.starter.drinkfriend.ui.views.reviewslist.ReviewsList.ReviewsModel;
 
 /**
  * Displays the list of available categories, with a search filter as well as
@@ -88,14 +88,14 @@ public class ReviewsList extends PolymerTemplate<ReviewsModel> {
         ReviewService.getInstance().saveReview(review);
         updateList();
         Notification.show(
-                "Beverage successfully " + operation.getNameInText() + "ed.",
+                "Drink successfully " + operation.getNameInText() + "ed.",
                 3000, Position.BOTTOM_START);
     }
 
     public void deleteUpdate(Review review) {
         ReviewService.getInstance().deleteReview(review);
         updateList();
-        Notification.show("Beverage successfully deleted.", 3000,
+        Notification.show("Drink successfully deleted.", 3000,
                 Position.BOTTOM_START);
     }
 

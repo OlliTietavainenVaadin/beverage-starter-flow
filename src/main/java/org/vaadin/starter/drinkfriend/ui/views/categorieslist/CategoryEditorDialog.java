@@ -13,17 +13,17 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.vaadin.starter.beveragebuddy.ui.views.categorieslist;
+package org.vaadin.starter.drinkfriend.ui.views.categorieslist;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.validator.StringLengthValidator;
-import com.vaadin.starter.beveragebuddy.backend.Category;
-import com.vaadin.starter.beveragebuddy.backend.CategoryService;
-import com.vaadin.starter.beveragebuddy.backend.ReviewService;
-import com.vaadin.starter.beveragebuddy.ui.common.AbstractEditorDialog;
+import org.vaadin.starter.drinkfriend.backend.Category;
+import org.vaadin.starter.drinkfriend.backend.CategoryService;
+import org.vaadin.starter.drinkfriend.backend.ReviewService;
+import org.vaadin.starter.drinkfriend.ui.common.AbstractEditorDialog;
 
 /**
  * A dialog for editing {@link Category} objects.

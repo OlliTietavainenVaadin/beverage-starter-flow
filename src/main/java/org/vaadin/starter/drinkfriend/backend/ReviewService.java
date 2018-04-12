@@ -1,4 +1,4 @@
-package com.vaadin.starter.beveragebuddy.backend;
+package org.vaadin.starter.drinkfriend.backend;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.vaadin.starter.beveragebuddy.ui.encoders.LocalDateToStringEncoder;
+import org.vaadin.starter.drinkfriend.ui.encoders.LocalDateToStringEncoder;
 
 /**
  * Simple backend service to store and retrieve {@link Review} instances.
@@ -34,17 +34,17 @@ public class ReviewService {
             final ReviewService reviewService = new ReviewService();
             Random r = new Random();
             int reviewCount = 20 + r.nextInt(30);
-            List<Map.Entry<String, String>> beverages = new ArrayList<>(
-                    StaticData.BEVERAGES.entrySet());
+            List<Map.Entry<String, String>> drinks = new ArrayList<>(
+                    StaticData.DRINKS.entrySet());
 
             for (int i = 0; i < reviewCount; i++) {
                 Review review = new Review();
-                Map.Entry<String, String> beverage = beverages
-                        .get(r.nextInt(StaticData.BEVERAGES.size()));
+                Map.Entry<String, String> drink = drinks
+                        .get(r.nextInt(StaticData.DRINKS.size()));
                 Category category = CategoryService.getInstance()
-                        .findCategoryOrThrow(beverage.getValue());
+                        .findCategoryOrThrow(drink.getValue());
 
-                review.setName(beverage.getKey());
+                review.setName(drink.getKey());
                 LocalDate testDay = getRandomDate();
                 review.setDate(testDay);
                 review.setScore(1 + r.nextInt(5));
