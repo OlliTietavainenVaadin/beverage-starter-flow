@@ -6,7 +6,7 @@ layout: page
 
 = Using the Annotation Based Router API
 
-In Beverage Buddy, we are using the annotation based router API. The following sections demonstrate the usage of the new API through snippets from the code.
+In Drink Friend, we are using the annotation based router API. The following sections demonstrate the usage of the new API through snippets from the code.
 
 == Defining the routes with @Route
 In the annotation based router API, different routes are defined by annotating your target classes with `@Route`.
