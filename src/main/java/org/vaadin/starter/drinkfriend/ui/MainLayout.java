@@ -20,7 +20,7 @@ import com.vaadin.flow.component.dependency.HtmlImport;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.icon.Icon;
-import com.vaadin.flow.component.icon.VaadinIcons;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.router.AfterNavigationEvent;
 import com.vaadin.flow.router.AfterNavigationObserver;
@@ -47,11 +47,11 @@ public class MainLayout extends Div implements RouterLayout, AfterNavigationObse
         title.addClassName("main-layout__title");
 
         reviews = new RouterLink(null, ReviewsListing.class);
-        reviews.add(new Icon(VaadinIcons.LIST), new Text("Reviews"));
+        reviews.add(new Icon(VaadinIcon.LIST), new Text("Reviews"));
         reviews.addClassName("main-layout__nav-item");
 
         categories = new RouterLink(null, CategoriesList.class);
-        categories.add(new Icon(VaadinIcons.ARCHIVES), new Text("Categories"));
+        categories.add(new Icon(VaadinIcon.ARCHIVES), new Text("Categories"));
         categories.addClassName("main-layout__nav-item");
 
         Div navigation = new Div(reviews, categories);
