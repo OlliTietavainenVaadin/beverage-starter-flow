@@ -6,7 +6,8 @@ import com.vaadin.flow.component.html.H4;
 import com.vaadin.flow.component.html.H5;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.html.Span;
-import com.vaadin.flow.component.icon.VaadinIcons;
+import com.vaadin.flow.component.icon.VaadinIcon;
+
 import org.vaadin.starter.drinkfriend.backend.Review;
 import org.vaadin.starter.drinkfriend.ui.common.AbstractEditorDialog;
 
@@ -27,7 +28,7 @@ public class ReviewItem extends Div {
 
     private Button createButton(Review review, ReviewsListing listing) {
         Button button = new Button("Edit");
-        button.setIcon(VaadinIcons.EDIT.create());
+        button.setIcon(VaadinIcon.EDIT.create());
         button.setClassName("review__edit");
         button.getElement().setAttribute("theme", "tertiary");
         button.addClickListener(e -> listing.openForm(review, AbstractEditorDialog.Operation.EDIT));
